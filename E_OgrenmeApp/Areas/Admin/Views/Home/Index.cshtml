@@ -1,0 +1,45 @@
+﻿@using System.Web.Optimization
+
+@model E_OgrenmeApp.Areas.ViewModels.HomeNew
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Öğretmen Ekleme Paneli</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <div class="form-group">
+            <div>
+                @Html.LabelFor(x => x.Adı)
+                @Html.TextBoxFor(x => x.Adı, new { @class = "form-control" })
+            </div>
+            <div>
+                @Html.LabelFor(x => x.Soyadı)
+                @Html.TextBoxFor(x => x.Soyadı, new { @class = "form-control" })
+            </div>
+            <div>
+                @Html.LabelFor(x => x.Branşı)
+                @Html.TextBoxFor(x => x.Branşı, new { @class = "form-control" })
+            </div>
+            <br />
+            <input type="submit" value="Ekle" style="width:150px; padding:10px; padding-top:5px;  font-weight:bold;  " class="btn btn-primary" />
+        </div>
+
+    }
+    @section Scripts{
+        @Scripts.Render("~/admin/home/scripts")
+    }
+    </body>
+</html>

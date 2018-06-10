@@ -1,0 +1,43 @@
+﻿
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>E-Öğrenme</title>
+    <meta name="description" content="E-Öğrenme">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Burak TÜRKERİ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/Kurumsal_Blog/style.css">
+    <link rel="stylesheet" href="/Kurumsal_Blog/css/bootstrap.min.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+        <div class="container">
+            <a href="anasayfa.cshtml" class="navbar-brand"><a href="@Url.RouteUrl("")"><img class="img-fluid" src="~/eogrenme.png"  width="150" height="50"></a></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuac">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuac">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="@Url.RouteUrl("")" class="nav-link"><i class="fa fa-home"></i> Anasayfa</a></li>
+                    <li class="nav-item active"><a href="@Url.RouteUrl("VideoAra")" class="nav-link"><i class="fas fa-search"></i> Video Ara</a></li>
+                    <li class="nav-item active"><a href="Login" class="nav-link"><i class="fas fa-sign-in-alt"></i> Giriş Yap</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+    <script src="/Kurumsal_Blog/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="/Kurumsal_Blog/js/popper.js"></script>
+    <script src="/Kurumsal_Blog/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿@model E_OgrenmeApp.Areas.ViewModels.HomeOgretmenListele
+
+<div class="container">
+    <h1>Öğretmen Listesi</h1>
+    <div class="btn-toolbar">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Öğretmen Adı</th>
+                    <th>Öğretmen Soyadı</th>
+                    <th>Verdiği Ders</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ogretmen in Model.ogretmenler)
+                {
+                    <tr>
+                        <td>@ogretmen.Ogretmen_Adı</td>
+                        <td>@ogretmen.Ogretmen_Soyadı</td>
+                        <td>@ogretmen.Verdigi_Ders</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
